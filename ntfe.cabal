@@ -59,16 +59,17 @@ library
     import:           warnings
 
     -- Modules exported by the library.
-    exposed-modules:  MyLib
+    exposed-modules:  Parser
 
     -- Modules included in this library but not exported.
     -- other-modules:
 
     -- LANGUAGE extensions used by modules in this package.
+    default-extensions: UnicodeSyntax
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.17.0.0
+    build-depends:    base ^>=4.16.0.0
 
     -- Directories containing source files.
     hs-source-dirs:   lib
@@ -88,10 +89,11 @@ executable ntfe
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
+    default-extensions: UnicodeSyntax
 
     -- Other library packages from which modules are imported.
     build-depends:
-        base ^>=4.17.0.0,
+        base ^>=4.16.0.0,
         ntfe
 
     -- Directories containing source files.
@@ -112,6 +114,7 @@ test-suite ntfe-test
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
+    default-extensions: UnicodeSyntax
 
     -- The interface type and version of the test suite.
     type:             exitcode-stdio-1.0
@@ -124,5 +127,5 @@ test-suite ntfe-test
 
     -- Test dependencies.
     build-depends:
-        base ^>=4.17.0.0,
+        base ^>=4.16.0.0,
         ntfe
